@@ -6,10 +6,6 @@ dotenv.config({  //configuration of dot env
 import connectDB from "./db/indexx.js";
 import { app } from "./app.js";
 
-
-
-
-
 connectDB().
 then(()=>{
     /*app.on("error",(error)=>{
@@ -20,7 +16,6 @@ then(()=>{
         console.log(`server is running on port : ${process.env.PORT}`);
     })
 }
-
 ).
 catch((err)=>{
     console.log("db connection failed", err);
