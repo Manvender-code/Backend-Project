@@ -16,4 +16,14 @@ app.use(express.urlencoded({extended:true,limit:"16KB"}))//for data from URL
 app.use(express.static("public")) // for fevicon,photo data
 
 app.use(cookieParser()); 
+
+
+//routes 
+import userRouter from "./routes/user.routes.js"
+
+app.use("/api/v2/users",userRouter);
+
+
+
+
 export {app};
